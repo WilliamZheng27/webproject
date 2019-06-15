@@ -57,6 +57,14 @@ typora-copy-images-to: ./img
 
 #### 主页(class Mainpage)
 
+##### loadTop()
+
+获取置顶文章
+
+##### loadTag()
+
+获取标签云
+
 ##### loadMore()
 
 获取更多日志
@@ -95,11 +103,11 @@ s：enum{"qzone","sina","qq"}
 
 ## 后端接口定义
 
-### 提供
+### 日志
 
 
 
-### 接收
+### 照片
 
 ## 数据库定义
 
