@@ -11,20 +11,20 @@ class JSONRequest{
         if (context == null){
             context = this;
         }
-        if (methodSet.indexOf(method) == -1){
-            throw "Iilegal Method";
+        if (methodSet.indexOf(method) === -1){
+            throw "Illegal Method";
         }
-        var XMLRequest = new XMLHttpRequest();
-        var request = remoteHandler + '?resourceName=' + resourceName + '?filter=' + filter;
+        let XMLRequest = new XMLHttpRequest();
+        let request = remoteHandler + '?resourceName=' + resourceName + '?filter=' + filter;
         XMLRequest.open(method, request);
-        if (method != 'GET' && data != null){
+        if (method !== 'GET' && data != null){
             XMLRequest.send(data);
         }
         else{
             XMLRequest.send();
         }
         XMLRequest.onreadystatechange(new function(){
-            if (XMLRequest.readyState == 4 && XMLRequest.status == 200)
+            if (XMLRequest.readyState === 4 && XMLRequest.status === 200)
                 return JSON.parse(XMLRequest.responseText);
         });
     }
