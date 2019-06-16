@@ -1,10 +1,4 @@
-<%@ page import="java.util.*" %><%--
-  Created by IntelliJ IDEA.
-  User: williamzheng
-  Date: 19-6-15
-  Time: 下午11:49
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="mainpage" tagdir="/WEB-INF/tags" %>
