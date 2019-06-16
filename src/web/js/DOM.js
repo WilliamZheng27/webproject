@@ -3,20 +3,20 @@ class MainPage{
     constructor(){
         this.title = document.querySelector("title").innerText;
         this.desc = document.querySelector("meta[name=description]").content;
+        this.articleList = document.querySelector(".article-list");
         this.btnMore = document.getElementById("moreclick");
 	    this.btnMore.addEventListener("click", this.loadMore, false);
         // 分享模块
         let imgs = document.querySelectorAll("#container .content>aside .shareclick img");
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].addEventListener("click", function() {
-                goShare(this.alt);
+                MainPage().goShare(this.alt);
             }, false);
         }
     }
 
     //获取更多日志
     loadMore(){
-        let articlelist = document.querySelector(".article-list");
         //TODO:Use requestHTML to acquire content
 		let artstr =
 			'<article class="all-article" id="next">\
@@ -40,7 +40,7 @@ class MainPage{
 									<img src="img/fabulous_gray.png" /> <span class="fabulous-count">5</span>\
 								</footer>\
 							</article>';
-		articlelist.insertAdjacentHTML("afterend", artstr);
+		this.articleList.insertAdjacentHTML("afterend", artstr);
     }
 
     goShare(s){

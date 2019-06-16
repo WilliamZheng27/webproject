@@ -15,6 +15,7 @@
 }
 
 #wrapper>#container>.content>section {
+	min-width: 60%;
 	max-width: 695px;
 }
 
@@ -53,24 +54,12 @@
 	background-color: orangered;
 }
 
-#s1,
-#s2,
-#s3 {
+.sign-span{
 	font-family: 楷体;
 	margin-right: 5px;
-}
-
-#s1 {
 	background-color: red;
 }
 
-#s2 {
-	background-color: orangered;
-}
-
-#s3 {
-	background-color: orange;
-}
 
 .art-title {
 	float: left;
